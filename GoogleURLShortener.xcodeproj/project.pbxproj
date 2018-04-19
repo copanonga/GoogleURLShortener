@@ -13,9 +13,13 @@
 		8203821D20888CAC00F04066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8203821C20888CAC00F04066 /* Assets.xcassets */; };
 		8203822020888CAC00F04066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8203821E20888CAC00F04066 /* LaunchScreen.storyboard */; };
 		8203822320888CAC00F04066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8203822220888CAC00F04066 /* main.m */; };
+		8203822A2088904400F04066 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 820382292088903B00F04066 /* Podfile */; };
+		CCE387847C86AC048E25DA58 /* libPods-GoogleURLShortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 606C18888D8FF6BF8070E85C /* libPods-GoogleURLShortener.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3633B0376198451ED9443576 /* Pods-GoogleURLShortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleURLShortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleURLShortener/Pods-GoogleURLShortener.release.xcconfig"; sourceTree = "<group>"; };
+		606C18888D8FF6BF8070E85C /* libPods-GoogleURLShortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleURLShortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8203821020888CAC00F04066 /* GoogleURLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleURLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8203821320888CAC00F04066 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8203821420888CAC00F04066 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		8203821F20888CAC00F04066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8203822120888CAC00F04066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8203822220888CAC00F04066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		820382292088903B00F04066 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0B2428E51F492B33D215387 /* Pods-GoogleURLShortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleURLShortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleURLShortener/Pods-GoogleURLShortener.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE387847C86AC048E25DA58 /* libPods-GoogleURLShortener.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2441840162EE8EE3807626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2428E51F492B33D215387 /* Pods-GoogleURLShortener.debug.xcconfig */,
+				3633B0376198451ED9443576 /* Pods-GoogleURLShortener.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8203820720888CAB00F04066 = {
 			isa = PBXGroup;
 			children = (
 				8203821220888CAC00F04066 /* GoogleURLShortener */,
 				8203821120888CAC00F04066 /* Products */,
+				6A2441840162EE8EE3807626 /* Pods */,
+				B53B5436A990557C557D1E27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,7 @@
 		8203821220888CAC00F04066 /* GoogleURLShortener */ = {
 			isa = PBXGroup;
 			children = (
+				820382292088903B00F04066 /* Podfile */,
 				8203821320888CAC00F04066 /* AppDelegate.h */,
 				8203821420888CAC00F04066 /* AppDelegate.m */,
 				8203821620888CAC00F04066 /* ViewController.h */,
@@ -71,6 +90,14 @@
 			path = GoogleURLShortener;
 			sourceTree = "<group>";
 		};
+		B53B5436A990557C557D1E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				606C18888D8FF6BF8070E85C /* libPods-GoogleURLShortener.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8203822620888CAC00F04066 /* Build configuration list for PBXNativeTarget "GoogleURLShortener" */;
 			buildPhases = (
+				282054111CA74EC12BA9FB0C /* [CP] Check Pods Manifest.lock */,
 				8203820C20888CAC00F04066 /* Sources */,
 				8203820D20888CAC00F04066 /* Frameworks */,
 				8203820E20888CAC00F04066 /* Resources */,
+				F55F2EA86DB1F223A2521E70 /* [CP] Embed Pods Frameworks */,
+				852C8FEDB1D9C28D423464A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +161,63 @@
 			files = (
 				8203822020888CAC00F04066 /* LaunchScreen.storyboard in Resources */,
 				8203821D20888CAC00F04066 /* Assets.xcassets in Resources */,
+				8203822A2088904400F04066 /* Podfile in Resources */,
 				8203821B20888CAC00F04066 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		282054111CA74EC12BA9FB0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleURLShortener-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		852C8FEDB1D9C28D423464A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleURLShortener/Pods-GoogleURLShortener-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55F2EA86DB1F223A2521E70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleURLShortener/Pods-GoogleURLShortener-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8203820C20888CAC00F04066 /* Sources */ = {
@@ -276,6 +358,7 @@
 		};
 		8203822720888CAC00F04066 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B2428E51F492B33D215387 /* Pods-GoogleURLShortener.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +373,7 @@
 		};
 		8203822820888CAC00F04066 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3633B0376198451ED9443576 /* Pods-GoogleURLShortener.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
