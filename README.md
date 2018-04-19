@@ -1,6 +1,9 @@
 # GoogleURLShortener
 Acortar URLs.
 
+* Petición: https://www.googleapis.com/urlshortener/v1/url?key=API_KEY
+* Parámetro *longURL* con la URL a acortar
+
 JSON obtenido:
 
 ```
